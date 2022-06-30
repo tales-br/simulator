@@ -1,4 +1,4 @@
-package br.tales.simulator
+package br.tales.simulator.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

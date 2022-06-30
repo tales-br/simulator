@@ -8,4 +8,7 @@
     <string name="cd_AwayTeam">Imagem do time visitante</string>
     <string name="cd_HomeTeam">Imagem do time mandante</string>
 
+    //erros
+    <string name="error_api">Erro inesperado</string>
+
 </resources>

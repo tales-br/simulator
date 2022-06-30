@@ -10,4 +10,7 @@
     //text core
     <string name="txt_versusX" translatable="false">X</string>
 
+    //errors
+    <string name="error_api">Unexpected error</string>
+
 </resources>
