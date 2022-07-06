@@ -4,7 +4,12 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import br.tales.simulator.databinding.ActivityDetailBinding
 
-class DetailActivity : AppCompatActivity() {
+class DetailActivity : AppCompatActivity()
+{
+    object Extra
+    {
+        const val MATCH = "EXTRA_MATCH"
+    }
 
     private lateinit var binding: ActivityDetailBinding
 

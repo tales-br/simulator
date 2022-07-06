@@ -15,7 +15,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvMatches"
@@ -23,6 +23,8 @@
         android:layout_height="match_parent"
         tools:listitem="@layout/match_item"
         tools:itemCount="4"/>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fabSimulate"
@@ -33,7 +35,8 @@
         android:contentDescription="@string/txt_button_simulate"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@android:drawable/arrow_down_float" />
+        app:maxImageSize="48dp"
+        app:srcCompat="@drawable/ic_redo" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
