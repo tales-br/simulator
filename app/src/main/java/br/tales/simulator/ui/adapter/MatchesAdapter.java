@@ -18,7 +18,7 @@ import br.tales.simulator.ui.DetailActivity;
 
 public class MatchesAdapter extends RecyclerView.Adapter<MatchesAdapter.ViewHolder>
 {
-    private List<Match> matches;
+    private final List<Match> matches;
 
     public MatchesAdapter(List<Match> matches)
     {
@@ -36,18 +36,8 @@ public class MatchesAdapter extends RecyclerView.Adapter<MatchesAdapter.ViewHold
         }
     }
 
-    @NonNull
-    @Override
-    //Instancia o viewHolder. Precisa de um item de binding
-    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType)
-    {
-        LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
-        MatchItemBinding binding = MatchItemBinding.inflate(layoutInflater, parent, false);
-        return new ViewHolder(binding);
-    }
-
-    @Override
     //Adapta os dados da partida (recuperado da API do git) e atribui ao layout
+    @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position)
     {
         Context context = holder.itemView.getContext();
@@ -64,22 +54,26 @@ public class MatchesAdapter extends RecyclerView.Adapter<MatchesAdapter.ViewHold
         Glide.with(context).load(match.getAwayTeam().getImage()).into(holder.binding.ivAwayTeam);
         holder.binding.tvAwayTeamName.setText(match.getAwayTeam().getName());
 
-        if(match.getAwayTeam().getScore()!=null)
+        if (match.getAwayTeam().getScore() != null)
         {
-            holder.binding.tvAwayTeamName.setText(String.valueOf(match.getAwayTeam().getScore()));
+            holder.binding.tvAwayTeamScore.setText(String.valueOf(match.getAwayTeam().getScore()));
         }
 
-        holder.itemView.setOnClickListener
-            (
-                view ->
-                {
-                    Intent intent = new Intent (context, DetailActivity.class);
-                    intent.putExtra(DetailActivity.Extra.MATCH, match);
-                    context.startActivity(intent);
-                }
+        holder.itemView.setOnClickListener(view -> {
+            Intent intent = new Intent(context, DetailActivity.class);
+            intent.putExtra(DetailActivity.Extras.MATCH, match);
+            context.startActivity(intent);
+        });
+    }
 
-            );
-
+    //Instancia o viewHolder. Precisa de um item de binding
+    @NonNull
+    @Override
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType)
+    {
+        LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
+        MatchItemBinding binding = MatchItemBinding.inflate(layoutInflater, parent, false);
+        return new ViewHolder(binding);
     }
 
     @Override

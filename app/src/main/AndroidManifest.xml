@@ -1,19 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     package="br.tales.simulator">
 
     <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:allowBackup="true"
-        android:dataExtractionRules="@xml/data_extraction_rules"
-        android:fullBackupContent="@xml/backup_rules"
         android:icon="@drawable/ic_logo_bola"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Simulator"
-        tools:targetApi="31">
+        android:theme="@style/Theme.Simulator">
 
         <activity
             android:name=".ui.MainActivity"
@@ -27,9 +23,9 @@
 
         <activity
             android:name=".ui.DetailActivity"
-            android:exported="false"
-            android:theme="@style/Theme.Design.NoActionBar"
-            android:parentActivityName=".ui.MainActivity"/>
+            android:exported="true"
+            android:parentActivityName=".ui.MainActivity"
+            android:theme="@style/Theme.Simulator.NoActionBar" />
 
     </application>
 
