@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "909423491345",
+    "project_id": "tales-simulator",
+    "storage_bucket": "tales-simulator.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:909423491345:android:b56ef664fec90900ce74b0",
+        "android_client_info": {
+          "package_name": "br.tales.simulator"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "909423491345-1gpu2sm8u3rnun0djmvam5pfv83soaiu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAEpNGYpiy9eP1P5BRk2qhnZRAruTyJn10"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "909423491345-1gpu2sm8u3rnun0djmvam5pfv83soaiu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
